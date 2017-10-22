@@ -1,0 +1,169 @@
+	<div id="footer">
+
+	</div>
+
+	<script>
+	var j = 0;
+	var k = 0;
+	var l = 0;
+
+	function openNav(x) {
+		if(j==1|x==1){
+	    document.getElementById("mySidenav").style.left = "-195px"; j=0;}
+	    else{document.getElementById("mySidenav").style.left = "45px"; j=1;}
+	    //document.getElementById("photoshop").style.marginLeft = "695px";
+	}
+
+	function openNav2() {
+		if(k==0){
+	    document.getElementById("mySidenav2").style.left = "0px"; k=1;}
+	    else{
+	    	document.getElementById("mySidenav2").style.left = "-1679px"; k=0;
+
+		}
+	    //document.getElementById("photoshop").style.marginLeft = "695px";
+	}
+
+	function openNav3() {
+		if(l==0){
+			var y = document.getElementsByClassName("videobtnWrap");
+			for(i = 0; i < y.length; i++){
+			  y[i].style.right = "0px";
+			}
+	    	document.getElementById("mySidenav3").style.right = "0px"; l=1;
+		}
+	    else{document.getElementById("mySidenav3").style.right = "-196px";
+	    	var y = document.getElementsByClassName("videobtnWrap");
+			for (i = 0; i < y.length; i++) {
+			  y[i].style.right = "-240px";
+			}
+	    
+	     l=0;}
+	    //document.getElementById("photoshop").style.marginLeft = "695px";
+	}
+
+	function Dropdown() {
+	    document.getElementById("toolsList").classList.toggle("show");
+	}
+
+	// Close the dropdown menu if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+	    var dropdowns = document.getElementsByClassName("toolsList");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 9,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
+    });
+
+	// 여기여기!
+    var swiper2 = new Swiper('.swiper-container2', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        direction: 'vertical',
+        coverflow: {
+            rotate: 20,
+            stretch: 0,
+            depth: 20,
+            modifier: 2,
+            slideShadows : true
+        }
+    });
+	</script>
+
+	<script>
+
+		$(document).ready( function() {
+
+			$(".toolsbtn").on("click" , function () {
+				var image = document.getElementById('toolsbtn1');
+				if (image.src.match("-1")) {
+			        image.src = "../images/main/tools1.png";
+			    } else {
+			        image.src = "../images/main/tools1-1.png";
+			    }
+
+			    var image2 = document.getElementById('toolsbtn2');
+				if (image2.src.match("-1")) {
+			        image2.src = "../images/main/tools2.png";
+			    } else {
+			        image2.src = "../images/main/tools2-1.png";
+			    }
+
+				$(this).toggleClass("on");
+				return false; //a태그 영향으로인한 클릭할때마다 새로고침 방지
+			})
+
+
+			$(".gnbList > li > a").on("click", function (){
+				$(this).parent().siblings("li").find(".toolsList2").slideUp(500,"easeOutQuint");
+				$(this).next(".toolsList2").slideToggle(500,"easeOutQuint"); //선택한 네비메뉴 클릭해서 열리고 닫히게 만들어줌
+				return false;
+			})
+
+			$(".swiper-slide > ul > li > a").on("click", function (){
+				return false;
+			})
+		})
+	</script>
+
+	<script>
+	$('.btn-example').click(function(){
+        var $href = $(this).attr('href');
+        layer_popup($href);
+    });
+    function layer_popup(el){
+
+        var $el = $(el);        //레이어의 id를 $el 변수에 저장
+        var isDim = $el.prev().hasClass('dimBg');   //dimmed 레이어를 감지하기 위한 boolean 변수
+
+        isDim ? $('.dim-layer').fadeIn() : $el.fadeIn();
+
+        var $elWidth = ~~($el.outerWidth()),
+            $elHeight = ~~($el.outerHeight()),
+            docWidth = $(document).width(),
+            docHeight = $(document).height();
+
+        // 화면의 중앙에 레이어를 띄운다.
+        if ($elHeight < docHeight || $elWidth < docWidth) {
+            $el.css({
+                marginTop: -$elHeight /2,
+                marginLeft: -$elWidth/2
+            })
+        } else {
+            $el.css({top: 0, left: 0});
+        }
+
+        $el.find('a.btn-layerClose').click(function(){
+            isDim ? $('.dim-layer').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+            return false;
+        });
+
+        $('.layer .dimBg').click(function(){
+            $('.dim-layer').fadeOut();
+            return false;
+        });
+
+    }
+	</script>
+</body>
+</body>
+</html>

@@ -1,0 +1,6 @@
+
+.hidden { font-size:1px; width:0; height:0; overflow: hidden; position:absolute; left:-9999px; }
+.blind { display:none; }
+.red { color:#f00; }
+.list > li {float:left;}
+.list > li:first-child {margin-left: 0;}

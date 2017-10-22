@@ -1,0 +1,240 @@
+<? include("../include/header.html"); ?>
+<div class = "studio">
+	<div class="infoBar">
+		<ul>
+			<li><a href=""><img src="../images/main/prevbtn.png" alt="prev"></a></li>
+			<li><a href=""><img src="../images/main/nextbtn.png" alt="next"></a></li>
+			<li><a href=""><img src="../images/main/checkbtn.png" alt="apply"></a></li>
+		</ul>
+	</div>
+
+	<div class="toolBoxWrap" style="position: relative; display: inline-block;">
+		<ul id="toolBox" class="gnbList">
+			<li>
+				<a href="" class="toolsbtn" onclick="openNav(1)">
+					<div><img id = "toolsbtn1" src="../images/main/tools1.png"></div>
+					<div><img id = "toolsbtn2" src="../images/main/tools2.png"></div>
+				</a>
+				<ul id = "toolsList" class="toolsList2">
+					<span style="cursor:pointer;" onclick="openNav(0)">
+						<li><img src="../images/main/selection.png"></li>
+					</span>
+					<li><a href="javascript:return false;"><img src="../images/main/rotopentool.png"></a></li>
+					<li><a href="javascript:return false;"><img src="../images/main/brightness.png"></a></li>
+					<li><a href="javascript:return false;"><img src="../images/main/contrast.png"></a></li>
+					<li><a href="javascript:return false;"><img src="../images/main/blur.png"></a></li>
+					<li><a href="javascript:return false;"><img src="../images/main/handtool.png"></a></li>
+				</ul>
+			</li>
+			<!--tools end-->
+			<li><img src="../images/main/layers.png" style="margin: 8px 10px 8px 6px; width: 25px; height: 25px;"></li>
+			<li><img src="../images/main/viewtype.png" style="margin: 8px 10px 8px 6px; width: 25px; height: 25px;"></li>
+			
+			
+			<li><span style="cursor:pointer;" onclick="openNav2()"><img src="../images/main/drawings.png"></span></li>
+			
+
+		</ul>
+	</div>
+	
+	<div class="controlBox" id="mySidenav">
+
+		<ul id="controlBoxWrap">
+			<!--a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a-->
+			<li class="">
+				<ul class="rotoPen">
+					
+					<li>
+						<img src="../images/main/RPTtitle.png">
+					</li>
+					<li>
+						<ul class="RPTools">
+							<li>
+								<a href="javascript:return false;" id="rotopen1" onclick="changeText('rotopen_tol');" class="spanBtn"><img src="../images/main/rotopen.png"></a>
+							</li>
+							<li>
+								<a href="javascript:return false;" id="rotopen2" onclick="changeText('rotopen2_tol');" class="spanBtn"><img src="../images/main/rotopen2.png"></a>
+							</li>
+							<li>
+								<a href="javascript:return false;" id="pencil" onclick="changeText('pencil_tol');" class="spanBtn"><img src="../images/main/pencil.png"></a>
+							</li>
+							<li>
+								<a href="javascript:return false;" id="eraser" onclick="changeText('eraser_tol');" class="spanBtn"><img src="../images/main/eraser.png"></a>
+							</li>
+							
+							<div id="RPTRangeWrap">
+								<div id = "rotopen_tol" class="showdiv" width="100" style="display:none;">
+									<input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value, '1'); brushborder(this.value);" />
+									<p>Tolerance1 : </p><span id="range1" class="range">0</span>
+								</div>
+								
+								<div id = "rotopen2_tol"  class="showdiv" width="100" style="display:none;">
+									<input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value, '2'); brushborder(this.value);" />
+									<p>Tolerance2 : </p><span id="range2" class="range">0</span>
+								</div>
+								<div id = "pencil_tol" class="showdiv" width="100" style="display:none;">
+									<input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value, '3'); brushborder(this.value);" />
+									<p>Value3 : </p><span id="range3" class="range">0</span>
+								</div>
+								<div id = "eraser_tol" class="showdiv" width="100" style="display:none;">
+									<input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value, '4'); brushborder(this.value);" />
+									<p>Value4 : </p><span id="range4" class="range">0</span>
+								</div>
+							</div>
+						</ul>	
+					</li>
+				</ul>
+			</li>
+			<!-- 로토펜툴 end -->
+			
+			<li class="">
+				<ul class="contrast">
+					<li>
+						<img src="../images/main/CRTtitle.png">
+					</li>
+					<li>
+						<div id = "contrastRange">
+							<input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value, '5'); brushborder(this.value);" />
+							<p>Value5 : </p><span id="range5" class="range">0</span>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<!-- 콘트라스트 end -->
+		</ul>
+
+	</div>
+
+
+	<div class="drawingsWrap " id ="mySidenav2">
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<!-- <img src="../images/main/drawingBar.png"> -->
+		<div class="swiper-container" style="">
+			
+			<div class="swiper-wrapper">
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/1.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/2.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/3.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/4.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/5.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/6.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/7.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/2.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/1.png"></a>
+				</div>
+				<div class="swiper-slide swiper-slide1">
+					<a href=""><p>filename.jpg</p><img src="../images/sample/3.png"></a>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="videoBar">
+		<span style="cursor:pointer;" onclick="openNav3()">
+			<a href="javascript:return false;"><img src="../images/main/newVideo.png"></a>
+		</span>
+	</div>
+
+	
+	<div class="videoBoxWrap" id ="mySidenav3">
+		<span class="videobtnWrap newprojectBtn">
+			<a href="javascript:return false;" ><img src="../images/main/newprojectBtn.png"></a>
+		</span>
+
+		<span id="selectF">
+			<img src="../images/main/selectF.png">
+		</span>
+		<!-- 여기여기! -->
+		<div class="swiper-container2 swiper-container-horizontal videobtnWrap" style="transform: rotate(0deg);">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/1000.png" id="frame01" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/2000.png" id="frame02" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/3000.png" id="frame03" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/4000.png" id="frame04" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/5000.png" id="frame05" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/6000.png" id="frame06" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/7000.png" id="frame07" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/8000.png" id="frame08" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+				<div class="swiper-slide swiper-slide2 imagechange" >
+					<a href="javascript:return false;" ><img src="../images/frames/9000.png" id="frame09" onclick="drawImage(this.id); return;" style="width:195px; height:110px;"></a>
+				</div>
+			</div>
+			
+		</div>
+
+		<ul class="btnWrap videobtnWrap">
+			<li><a href="javascript:return false;"><img src="../images/main/saveBtn.png"></a></li>
+			<li><a href="javascript:return false;"><img src="../images/main/playBtn.png"></a></li>
+			<li><a href="javascript:return false;"><img src="../images/main/renderBtn.png" id="renderBtn" onclick="popup();"></a></li>
+			
+			<div id="myModal" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<span id="popup-close" onclick="popup_close(); return;" style="cursor:pointer;">&times;</span>
+						<h2>RENDER</h2>
+					</div>
+					<div class="modal-body" style="margin: auto; text-align:center; vertical-align:middle;">
+						<video width="720" height="480" controls>
+							<source src="../images/out50.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+					</div>
+					<div class="modal-footer">
+						
+					</div>
+				</div>
+
+			</div>
+
+
+			</ul>
+		</div>
+
+
+		<div id= "photoshop" class = "photoshop" style="position:absolute; left:0; top:0; width:100%; height:100%; padding-left:235px; padding-top: 123px;">
+			<canvas id = "canvas" width="1000" height="565" style="width:1000px; height:565px; bor der: white 1px solid; position:relative; background-size: 1000px 565px;">
+			</canvas>
+		</div>
+	</div>
+	<script src="../js/canvas.js"></script>
+
+
+	<? include("../include/footer.html"); ?>

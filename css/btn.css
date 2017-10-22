@@ -1,0 +1,26 @@
+.toolsbtn {position: relative;}
+.toolsbtn div { width:100%; transition: all 0.25s ease-out; }
+.toolsbtn div img { width: 25px; height: 4px; margin: 8px 9px 8px 7px;}
+.toolsbtn div:nth-child(1) { }
+.toolsbtn div:nth-child(2) { margin-top:-15px;}
+.toolsbtn.on div:nth-child(1) { transform:rotate(134deg); margin-top:6px; margin-left: -4px; }
+.toolsbtn.on div:nth-child(2) { transform:rotate(-134deg); margin-top:-29px; margin-left: -2px; }
+
+#coverflow {
+			width: 80px; height: 2000px; padding: 30px;
+			position: absolute; top: 0px; left: 0px;
+		}
+		
+		#coverflow img {
+			width: 64px; height: 64px; border: 1px solid #999;
+			float: left; position: relative; margin: 5px;
+		}
+		
+		div.wrapper {
+			width: 160px; height: 380px;
+			overflow: hidden; position: absolute; top: 0px; left: 0px;
+		}
+		
+		#demo-frame {
+			overflow: hidden;
+		}

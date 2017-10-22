@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+		body { height: 3000px; }
+		.wrap { width: 1000px; margin:100px auto; padding:30px; border: 1px solid #000; position:relative; }
+		.box { width: 100px; height: 100px; }
+		.red { background: #f00; }
+		.green { background: #0f0; }
+		.blue { background: #00f; }
+		.box { position: absolute; }
+		.green{ top: 0px; left:100px; }
+		.blue { top: 0px; left:200px; }
+		.btnTop { position:fixed; right:50px; bottom: 50px; }
+
+	</style>
+</head>
+<body>
+	<div class="wrap" id="top">
+		<div class="box red">01</div>
+		<div class="box green">02</div>
+		<div class="box blue">03</div>
+	</div>
+	<a href="#top" class="btnTop">Top</a>
+</body>
+</html>

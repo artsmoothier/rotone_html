@@ -1,0 +1,183 @@
+
+.studio { width: 100%; height: 100%; top: 0; bottom: 0; background: #24272E; position: relative; z-index: 1; }
+.studio .infoBar { width: 100%; height: 30px;  position:absolute; top:83px; background: rgba(0,0,0,0.5); z-index: 150; }
+.studio .infoBar:after {
+	content:""; display:block; font-size:0; clear: both;  width:100%; height: 1px; 
+	position:absolute; top:30px;  background: #000;
+}
+.infoBar ul { width: 243px; position: absolute; right: 0; padding: 0 20px; margin-top: 3px;}
+.infoBar li { display: block;  float:left; padding: 0 30px; }
+.infoBar img { width: 21px;  }
+
+.toolBoxWrap { 
+	width:45px; 
+	position: absolute; 
+	top:0px; 
+	height: 100%; 
+	background: #24272E; 
+	box-shadow: 5px 5px 30px 0 rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.toolBoxWrap #toolBox { position: absolute; top:119px; width:45px; height: 542px; border-bottom: 1px solid #1a1d21; transition: all 0.7s ease-out; }
+
+
+.toolBoxWrap #toolBox > li:nth-child(1) { width: 45px; height: auto; border-bottom: 1px solid #1a1d21; box-sizing: border-box; overflow: hidden;}
+.toolBoxWrap  #toolBox > li:nth-child(1):h  over { width: 45px; height: 315px; border-bottom: 1px solid #1a1d21; box-sizing: border-box; transit  ion: all 0.5s ease-out;}
+.toolBoxWrap #toolBox > li:nth-child(2) { width: 45px; height: 45px; border-bottom: 1px solid #1a1d21; box-sizing: border-box; }
+.toolBoxWrap #toolBox > li:nth-child(3) { width: 45px; height: 45px; box-sizing: border-box; }
+.toolBoxWrap #toolBox > li:nth-child(4) { width: 45px; height: 45px; position: absolute; bottom: 0px; box-sizing: border-box; }
+
+.toolBoxWrap #toolBox > li:nth-child(2) > a > img { width: 25px; height: 25px; margin: 8px 10px 8px 6px; }
+.toolBoxWrap #toolBox > li:nth-child(3) > a > img { width: 25px; height: 25px; margin: 8px 10px 8px 6px; }
+.toolBoxWrap #toolBox > li:nth-child(4) > span > img { width: 25px; height: 25px; margin: 8px 10px 8px 6px; }
+
+.toolBoxWrap #toolsList { padding-top: 10px;  }
+.toolBoxWrap #toolsList li { width: 45px; height: 45px;  }
+.toolBoxWrap #toolsList img { width:25px; height: 25px; margin: 8px 9px 8px 7px; }
+.toolsList2 {display: none; }
+
+
+.show {display:block; }
+
+
+
+.controlBox { 
+	width: 195px; 
+	height: 100%; 
+	background: #24272E;  
+	position: fixed; 
+	top:0; 
+	left: -195px; 
+	box-shadow: 5px 5px 30px 0 rgba(0,0,0,0.5); 
+
+
+	z-index: 1; 
+	overflow-x: hidden;
+	 transition: all 0.7s ease-out;
+}
+
+#controlBoxWrap { margin-top: 155px; }
+
+.controlBox .rotoPen {  left: 0px;   margin: 0 20px; padding: 0 0 30px;  border-bottom: 1px solid #1a1d21;  }
+.controlBox .rotoPen li:nth-child(1) img { height:15px;  }
+
+.controlBox .rotoPen .RPTools {  margin:  10px 0px 10px 15px;   }
+.controlBox .rotoPen .RPTools li { float: left; margin-left: 4px;  width: 25px; height: 25px; border: 1px solid #9ebfc3; box-sizing: border-box; }
+.controlBox .rotoPen .RPTools li img { display:block; margin: 3px auto; width: 19px; height: 19px;  }
+
+
+.controlBox .contrast { left: 0; margin:0 20px; padding: 0 0 30px; border-bottom: 1px solid #1a1d21;   }
+.controlBox .contrast img { height: 15px; }
+.controlBox .contrast #contrastRange { margin:  10px 0px 10px 15px;   }
+
+
+.controlBox .closebtn {
+	left: 0px;   
+	margin: 0 20px; 
+	font-size: 36px;
+	color:white;
+}
+
+.drawingsWrap {
+	position: absolute; bottom: 0px; width: 1295px; height: 150px; z-index: 99; left:-1679px; transition: all 0.7s ease-out; 
+	background-image: url('../images/main/drawingBar.png'); background-repeat: no-repeat;  background-size: contain;
+}
+.drawingsWrap .swiper-button-next { color: #fff;  margin-right: 25px;}
+.drawingsWrap .swiper-button-prev { color: #fff; margin-left: 192px; }
+.drawingsWrap .swiper-container { margin: 19px 250px; width: 965px; float: left; }
+.drawingsWrap .swiper-slide1 { margin: 0px 15px; float: left; display: block;  }
+.drawingsWrap .swiper-slide1 img { width: 85px; height: 85px; }
+.drawingsWrap .swiper-wrapper p { color: #fff; margin: 0 0 13px; font-weight: 100; font-size: 11px; text-align: center; }
+
+.drawingsWrap .Dleft { position: absolute; top: 85px; left:248px; }
+.drawingsWrap .Dright { position: absolute; top: 85px; right: 268px; }
+
+
+
+.videoBoxWrap { 
+	width:240px; 
+	position: absolute; 
+	top:0px; 
+	right: -196px;
+	height: 100%; 
+	background: #24272E; 
+	box-shadow: -5px 5px 30px 0 rgba(0,0,0,0.5);
+	z-index: 100;
+	transition: all 0.7s ease-out; 
+ }
+ .videoBoxWrap .newprojectBtn {  position: absolute; top:113px; transition: all 0.3s ease-out; z-index: 120;}
+.videoBoxWrap #selectF img { margin: 377px 5px; width: 8px; height: 10px;}
+.videoBoxWrap .btnWrap { position: absolute; bottom: 0px; z-index: 120;}
+.videoBoxWrap .btnWrap li { margin:0; height: 45px; }
+/*.videoBoxWrap .frames { position:absolute; top: 165px; height:453px; }*/
+
+/*.drawingsWrap .swiper-wrapper p { color: #fff; font-weight: 100; margin-bottom: 15px; }*/
+
+/*여기여기*/
+    .swiper-slide2 {
+		background-position: center;
+        background-size: cover;
+        width: 195px;
+        height: 110px;
+
+    }
+/*여기서 drawing style 스타일 조정해 참고해*/
+    .swiper-slide1 {
+        text-align: center;
+
+        width: 50%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+        /* Center slide text vertically */
+  /*      display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;*/
+    }
+
+
+    .swiper-container2 {
+
+    	position: absolute;
+        width: 220px;
+        height: 400px;
+        top:185px;
+        overflow: hidden;
+    }
+
+    /*여기까지~~~~.~*/
+
+.videobtnWrap { right:-240px; transition: all 0.3s ease-out; }
+
+.videoBar a { position: absolute; top:113px; right:0px; width:44px; height: 45px; display: block; z-index: 200; background: #24272E; z-index: 105;   }
+.videoBar a  img { width: 25px; height: 25px; margin: 8px 6px 8px 10px; }
+
+
+
+
+@media all and ( max-width: 480px) {
+	
+}
+
+@media all and ( max-width: 320px) {
+	
+}
+
+@media all and ( max-width: 480px) {
+	
+}
+
+@media all and ( max-width: 320px) {
+	
+}

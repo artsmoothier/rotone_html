@@ -1,0 +1,11 @@
+div { border: 1px solid #f00; }
+.header { height:100px; }
+.subVisual { height:150px; }
+.subContents {}
+.footer { height:120px; clear: both; } 
+
+.container { width:1200px; margin: 0 auto; border: 1px solid #00f; }
+.subContents .container { over flow: hidden; } 
+/*서브컨텐츠 클래스 안의 컨테이너 컨텐츠만 적용*/
+.lnb { float:left; width: 250px; }
+.contents { float:left; width: 900px;}
